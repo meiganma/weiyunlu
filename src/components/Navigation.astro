@@ -13,7 +13,6 @@ const navLinks = [
 <Header />
 
 <style>
-  /* 导航栏样式 */
   .navigation {
     background-color: #333;
     color: white;
@@ -21,7 +20,6 @@ const navLinks = [
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  /* 导航链接列表样式 */
   .nav-list {
     list-style: none;
     margin: 0;
@@ -31,12 +29,10 @@ const navLinks = [
     align-items: center;
   }
 
-  /* 导航链接项样式 */
   .nav-item {
     padding: 0 15px;
   }
 
-  /* 导航链接样式 */
   .nav-link {
     color: white;
     text-decoration: none;
@@ -50,7 +46,6 @@ const navLinks = [
 
 <nav class="navigation">
   <ul class="nav-list">
-    <!-- 使用 map 函数渲染导航链接 -->
     {navLinks.map(link => (
       <li class="nav-item">
         <a href={link.href} class="nav-link">{link.text}</a>
