@@ -1,6 +1,6 @@
 ---
 // Navigation.astro
-// 导航链接数组
+import Header from './Header.astro'; // 确保Header组件的路径是正确的
 const navLinks = [
   { text: '首页', href: '/' },
   { text: '产品', href: '/products' },
@@ -9,6 +9,44 @@ const navLinks = [
   { text: '联系', href: '/contact' }
 ];
 ---
+
+<Header />
+
+<style>
+  /* 导航栏样式 */
+  .navigation {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 导航链接列表样式 */
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 导航链接项样式 */
+  .nav-item {
+    padding: 0 15px;
+  }
+
+  /* 导航链接样式 */
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #4CAF50;
+  }
+</style>
 
 <nav class="navigation">
   <ul class="nav-list">
