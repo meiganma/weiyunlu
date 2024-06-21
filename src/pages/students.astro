@@ -1,6 +1,6 @@
 ---
 // Layout.astro
-import StuCard from '../components/StuCard.astro';
+import StuCard from "../components/StuCard.astro"; // 导入StuCard组件
 ---
 
 <!DOCTYPE html>
@@ -9,27 +9,34 @@ import StuCard from '../components/StuCard.astro';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学生信息页面</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- 其他头部信息 -->
+    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS样式文件 -->
+    <!-- 其他头部信息，如favicon等 -->
 </head>
 <body>
+    <!-- 页面头部 -->
     <header>
         <h1>学生信息展示</h1>
-        <!-- 导航链接 -->
+        <nav>
+            <!-- 导航链接 -->
+            <!-- 这里可以添加导航链接或通过属性注入 -->
+        </nav>
     </header>
-    
+
+    <!-- 页面主要内容区域 -->
     <main>
-        <!-- 使用 StuCard 组件渲染学生信息卡片 -->
+        <!-- 学生信息卡片组件区域 -->
         <section id="student-cards">
-            <StuCard name="小丽" number="P222" major="电气工程">
-                <p>介绍信：小丽是一名电气工程专业的学生，具有出色的技术能力和团队精神。</p>
-            </StuCard>
-            <!-- 其他 StuCard 组件 -->
+            <!-- 使用slot来预留内容注入的位置 -->
+            <slot name="student-cards" />
         </section>
     </main>
-    
+
+    <!-- 页面底部 -->
     <footer>
         <p>版权所有 © 2024 学生信息页面</p>
     </footer>
+
+    <!-- 引入Astro组件脚本，如果StuCard是客户端渲染的组件 -->
+    <script type="module" src="/components/StuCard.astro"></script>
 </body>
 </html>
