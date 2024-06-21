@@ -5,26 +5,5 @@ const{ name, number,major}=Astro.props;
     <h2> {name}</h2>
     <p>{number}</p>
     <p>{major}</p>
-    <style>
-        a {
-          color: aliceblue;
-          text-decoration: none;
-          margin-left: 1em;
-          margin-right: 1em;
-          transition: color 0.3s ease; 
-        }
-      
-        a:hover {
-          color: lightblue; 
-        }
-      
-         clickEffect {
-          50% { transform: scale(1.1); }
-        }
-      
-        a:active {
-          animation: clickEffect 0.5s;
-        }
-      </style>
     <slot/>
 </div>
