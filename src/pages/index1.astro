@@ -1,7 +1,43 @@
 ---
-import Mylayout from "../layouts/Mylayout.astro";
+// Mylayout.astro
+// 导入 Navigation 组件或其他页面组件
+import Navigation from '../components/Navigation.astro';
 ---
 
-<Mylayout title="这是我的模板" >
-<h1>这是自定义模板中的slot</h1>
-</Mylayout>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 1.0">
+    <title>{Astro.props.title}</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- 导航组件 -->
+    <Navigation />
+    
+    <!-- 页面主要内容区域，使用 <slot> 来预留内容插入的位置 -->
+    <main>
+        <slot /> <!-- 这将插入外部传入的内容 -->
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <p>版权所有 © 2024 您的网站或组织名称</p>
+    </footer>
+    
+    <style>
+        /* Mylayout 组件的样式 */
+        main {
+            margin: auto;
+            padding: 1rem;
+            max-width: 800px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f8f8f8;
+        }
+    </style>
+</body>
+</html>
