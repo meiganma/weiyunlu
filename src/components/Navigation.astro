@@ -7,6 +7,38 @@
 
 <style>
   a {
+  color: rgb(75, 148, 212);
+  text-decoration: none;
+  margin-left: 1em;
+  margin-right: 1em;
+  transition: color 0.3s ease;
+  border-radius: 20px; /* 添加椭圆边框，可以根据需要调整数值 */
+  padding: 5px 15px; /* 为链接添加内边距，以便用户更容易点击 */
+  background-color: transparent; /* 初始背景色为透明 */
+  border: 2px solid transparent; /* 初始无边框，可以设置颜色 */
+}
+
+a:hover {
+  color: lightblue;
+  border-color: lightblue; /* 鼠标悬停时添加边框颜色 */
+}
+
+/* 定义点击时的动画效果 */
+@keyframes click-effect {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+a:active {
+  animation: click-effect 0.5s;
+  background-color: rgba(75, 148, 212, 0.2); /* 点击时添加背景色 */
+  border-color: rgb(75, 148, 212); /* 点击时改变边框颜色 */
+}
+  a {
     color: rgb(75, 148, 212);
     text-decoration: none;
     margin-left: 1em;
