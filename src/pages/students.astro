@@ -1,9 +1,22 @@
 ---
+// 导入StuCard组件
 import StuCard from "../components/StuCard.astro";
 ---
 
-<StuCard name="小丽" number="P222" major="电气工程">
-    <p>情书</p >
-</StuCard>
-<StuCard name="小红" number="P333" major="生物制药"/>
-<StuCard name="小白" number="P444" major="播音主持"/>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 指定字符编码为UTF-8 -->
+    <meta charset="UTF-8">
+    <title>学生信息页面</title>
+    <!-- 其他头部信息，如<link>, <script>等 -->
+</head>
+<body>
+    <!-- 渲染StuCard组件 -->
+    <StuCard name="小丽" number="P222" major="电气工程">
+        <p>情书</p>
+    </StuCard>
+    <StuCard name="小红" number="P333" major="生物制药"></StuCard>
+    <StuCard name="小白" number="P444" major="播音主持"></StuCard>
+</body>
+</html>
