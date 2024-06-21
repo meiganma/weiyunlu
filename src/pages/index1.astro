@@ -17,9 +17,33 @@ import Navigation from '../components/Navigation.astro';
     <Navigation />
     
     <!-- 页面主要内容区域，使用 <slot> 来预留内容插入的位置 -->
-    <main>
-        <slot /> <!-- 这将插入外部传入的内容 -->
-    </main>
+            <main>
+                <section class="student-works">
+                    <h2>探索创新之光</h2>
+                    <p>在这片充满灵感的土地上，我们的学生以他们的才华和热情，创造出了一件件令人赞叹的作品。以下是我们精选的学生作品，每一件都闪耀着创新和智慧的光芒。</p>
+                    
+                    <article class="work-item">
+                        <h3>未来城市设计</h3>
+                        <img src="/path/to/future-city.jpg" alt="未来城市设计图">
+                        <p>由张三同学设计的这座未来城市，以其独特的生态平衡和可持续发展理念，赢得了今年的创新设计大奖。</p>
+                    </article>
+        
+                    <article class="work-item">
+                        <h3>智能机器人</h3>
+                        <img src="/path/to/robot.jpg" alt="智能机器人">
+                        <p>李四同学研发的这款智能机器人，不仅能够完成复杂的家务任务，还能与人类进行流畅的交流。</p>
+                    </article>
+        
+                    <article class="work-item">
+                        <h3>环保新材料</h3>
+                        <img src="/path/to/material.jpg" alt="环保新材料">
+                        <p>王五同学发现的这种新材料，具有极高的环保性能，为塑料替代品提供了新的可能性。</p>
+                    </article>
+        
+                    <p>这些作品不仅展示了学生们的创造力和专业技能，也体现了我们学校培养创新精神和实践能力的教育目标。我们为学生们的成就感到自豪，并期待他们在未来能够继续发光发热。</p>
+                </section>
+            </main>
+        
     
     <!-- 页脚 -->
     <footer>
