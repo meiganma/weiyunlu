@@ -1,9 +1,27 @@
 ---
-const{ name, number,major}=Astro.props;
+// 导入StuCard组件的逻辑部分
+const { name, number, major } = Astro.props;
 ---
-<div>
-    <h2> {name}</h2>
+
+<style>
+  /* 在这里添加CSS样式 */
+  .student-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .student-name {
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<div class="student-card">
+    <h2 class="student-name">{name}</h2>
     <p>{number}</p>
     <p>{major}</p>
+    <!-- 使用slot来插入子组件或内容 -->
     <slot/>
 </div>
