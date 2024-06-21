@@ -1,50 +1,35 @@
 ---
-import StuCard from "../components/StuCard.astro";
+// Layout.astro
+import StuCard from '../components/StuCard.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <!-- 指定字符编码为UTF-8 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学生信息页面</title>
-    <!-- 引入CSS样式文件 -->
     <link rel="stylesheet" href="styles.css">
-    <!-- 其他头部信息，如favicon等 -->
+    <!-- 其他头部信息 -->
 </head>
 <body>
-    <!-- 页面头部 -->
     <header>
         <h1>学生信息展示</h1>
-        <nav>
-            <!-- 导航链接 -->
-        </nav>
+        <!-- 导航链接 -->
     </header>
-
-    <!-- 页面主要内容区域 -->
+    
     <main>
-        <!-- 学生信息卡片组件 -->
+        <!-- 使用 StuCard 组件渲染学生信息卡片 -->
         <section id="student-cards">
             <StuCard name="小丽" number="P222" major="电气工程">
                 <p>介绍信：小丽是一名电气工程专业的学生，具有出色的技术能力和团队精神。</p>
             </StuCard>
-            <StuCard name="小红" number="P333" major="生物制药">
-                <p>介绍信：小红在生物制药领域有着浓厚的兴趣和扎实的专业知识。</p>
-            </StuCard>
-            <StuCard name="小白" number="P444" major="播音主持">
-                <p>介绍信：小白是一位才华横溢的播音主持专业学生，具有极佳的语言表达能力和舞台魅力。</p>
-            </StuCard>
-            <!-- 更多学生信息卡片可以继续添加 -->
+            <!-- 其他 StuCard 组件 -->
         </section>
     </main>
-
-    <!-- 页面底部 -->
+    
     <footer>
         <p>版权所有 © 2024 学生信息页面</p>
     </footer>
-
-    <!-- 引入Astro组件脚本 -->
-    <script type="module" src="/components/StuCard.astro"></script>
 </body>
 </html>
